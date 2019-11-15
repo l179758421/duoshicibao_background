@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<powers>
+
+    <power >
+        <id>1</id>
+        <praentId></praentId>
+        <name>账号管理</name>
+        <path></path>
+        <icon>&#xe62e;</icon>
+        <hasChild>1</hasChild>
+    </power>
+
+    <power >
+        <id>2</id>
+        <praentId >1</praentId>
+        <name>账号管理</name>
+        <path></path>
+        <icon>&#xe62e;</icon>
+    </power>
+
+    <power >
+        <id>3</id>
+        <praentId >1</praentId>
+        <name>菜单管理</name>
+        <path></path>
+        <icon>&#xe62e;</icon>
+    </power>
+    <!--##############################################-->
+    <power >
+        <id>4</id>
+        <praentId></praentId>
+        <name>充值码管理</name>
+        <path>/redeemCode/index</path>
+        <icon>&#xe674;</icon>
+        <single>1</single>
+    </power>
+
+    <!--##############################################-->
+    <power >
+        <id>5</id>
+        <praentId ></praentId>
+        <name>销售统计</name>
+        <path></path>
+        <icon>&#xe62e;</icon>
+        <single>1</single>
+    </power>
+
+    <!--##############################################-->
+    <power >
+        <id>6</id>
+        <praentId ></praentId>
+        <name>学校管理</name>
+        <path>/school/schoolIndex</path>
+        <icon>&#xe66c;</icon>
+    </power>
+    <!--##############################################-->
+    <power >
+        <id>7</id>
+        <praentId ></praentId>
+        <name>课本管理</name>
+        <path>/learnBook/index</path>
+        <icon>&#xe705;</icon>
+        <single>1</single>
+    </power>
+
+
+    <!--##############################################-->
+    <power >
+        <id>8</id>
+        <praentId ></praentId>
+        <name>用户管理</name>
+        <path></path>
+        <icon>&#xe62e;</icon>
+        <hasChild>1</hasChild>
+    </power>
+
+
+
+    <power >
+        <id>9</id>
+        <praentId >8</praentId>
+        <name>校长列表</name>
+        <path>/schoolMaster/schoolMasterIndex</path>
+        <icon>&#xe612;</icon>
+    </power>
+
+    <power >
+        <id>10</id>
+        <praentId >8</praentId>
+        <name>代理列表</name>
+        <path>agents/index</path>
+        <icon>&#xe663;</icon>
+    </power>
+
+    <power >
+        <id>11</id>
+        <praentId >8</praentId>
+        <name>授权管理</name>
+        <path></path>
+        <icon>&#xe62e;</icon>
+    </power>
+
+    <!--##############################################-->
+    <power >
+        <id>12</id>
+        <praentId ></praentId>
+        <name>通知管理</name>
+        <path></path>
+        <icon>&#xe62e;</icon>
+        <hasChild>1</hasChild>
+    </power>
+
+
+    <power >
+        <id>13</id>
+        <praentId >12</praentId>
+        <name>帮助列表</name>
+        <path>/help/index</path>
+        <icon>&#xe62e;</icon>
+    </power>
+
+    <power >
+        <id>14</id>
+        <praentId >12</praentId>
+        <name>消息列表</name>
+        <path>/message/index</path>
+        <icon>&#xe62e;</icon>
+    </power>
+
+    <power >
+        <id>15</id>
+        <praentId >12</praentId>
+        <name>反馈列表</name>
+        <path></path>
+        <icon>&#xe62e;</icon>
+    </power>
+
+
+    <!--##############################################-->
+    <power >
+        <id>16</id>
+        <praentId ></praentId>
+        <name>广告管理</name>
+        <path>/ad/index</path>
+        <icon>&#xe64a;</icon>
+        <single>1</single>
+    </power>
+    <!--##############################################-->
+
+
+    <power >
+        <id>17</id>
+        <praentId ></praentId>
+        <name>班级管理</name>
+        <path>/classInSchool/index</path>
+        <icon>&#xe613;</icon>
+        <single>1</single>
+    </power>
+
+    <power >
+        <id>24</id>
+        <praentId ></praentId>
+        <name>班级管理(教师)</name>
+        <path>/classInSchool/teacherIndex</path>
+        <icon>&#xe613;</icon>
+        <single>1</single>
+    </power>
+    <!--allWords-->
+
+    <power >
+        <id>18</id>
+        <praentId ></praentId>
+        <name>单词库</name>
+        <path>/allWords/index</path>
+        <icon>&#xe639;</icon>
+    </power>
+
+
+    <power >
+        <id>19</id>
+        <praentId ></praentId>
+        <name>系统设置</name>
+        <path>/adminConfig/index</path>
+        <icon>&#xe716;</icon>
+    </power>
+
+
+    <!--纠错处理-->
+
+    <power >
+        <id>20</id>
+        <praentId ></praentId>
+        <name>纠错处理</name>
+        <path>/errorsRecovery/index</path>
+        <icon>&#xe64d;</icon>
+    </power>
+
+
+    <!--学校绑定的申请-->
+    <power >
+        <id>21</id>
+        <praentId ></praentId>
+        <name>学校绑定申请</name>
+        <path>/appUserBindSchool/index</path>
+        <icon>&#xe64d;</icon>
+    </power>
+
+    <power >
+        <id>22</id>
+        <praentId ></praentId>
+        <name>学员管理</name>
+        <path>/appUser/index</path>
+        <icon>&#xe64d;</icon>
+    </power>
+
+    <power>
+        <id>23</id>
+        <praentId ></praentId>
+        <name>教师管理</name>
+        <path>/teacher/index</path>
+        <icon>&#xe612;</icon>
+    </power>
+
+
+</powers>
+
