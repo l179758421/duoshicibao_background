@@ -1,6 +1,8 @@
 package com.runer.cibao.util;
 
 
+import com.runer.cibao.exception.ResultMsg;
+import com.runer.cibao.exception.SmartCommunityException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
@@ -24,7 +26,7 @@ public class JwtUtil {
       private  String key="cibao";
 
    // @Value("${jwt.config-ttl}")
-      private  long ttl=360000;
+      private  long ttl=7*60*60*24*1000L;
 
 
       public String getKey() {
@@ -61,12 +63,15 @@ public class JwtUtil {
      * @param token
      * @return
              */
-      public  Claims parseJWT(String token) throws Exception{
-          Claims  claims = Jwts.parser()
-                   .setSigningKey(key)
-                   .parseClaimsJws(token).getBody();
-
-        return claims;
+      public  Claims parseJWT(String token) throws SmartCommunityException {
+          try {
+              Claims  claims = Jwts.parser()
+                      .setSigningKey(key)
+                      .parseClaimsJws(token).getBody();
+              return claims;
+          }catch (Exception e){
+              throw new SmartCommunityException(ResultMsg.COOKIE_IS_TIME_OUT);
+          }
    }
 
 
@@ -74,7 +79,12 @@ public class JwtUtil {
         JwtUtil jwt= new JwtUtil();
         String admin = jwt.createJWT("1228", "admin");
         System.out.println(admin);
+        Thread.sleep(1000);
         Claims claims = jwt.parseJWT(admin);
+        Date issuedAt = claims.getIssuedAt();
+        System.out.println(issuedAt.toLocaleString());
+        Date d = claims.getExpiration();
+        System.out.println(d.toLocaleString());
         System.out.println(claims.getId());
         System.out.println(claims.getSubject());
     }

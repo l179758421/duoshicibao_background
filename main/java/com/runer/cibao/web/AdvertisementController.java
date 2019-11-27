@@ -32,7 +32,7 @@ import java.util.Date;
 @RequestMapping(value = "ad")
 public class AdvertisementController {
 
-    @Value("${web.upload-basePath}")
+    @Value("${web.upload-cibaoPath}")
     private String rePath;
 
     @Value("${web.upload-path}")
