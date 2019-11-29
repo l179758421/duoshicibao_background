@@ -32,7 +32,7 @@ public class ReadServiceImpl extends BaseServiceImp<Read, ReadRespository> imple
             read = (Read) readResult.getData();
         }
         read.setImgUrl(imgUrl);
-        read.setTitle(imgUrl);
+        read.setTitle(title);
         read.setAuthor(author);
         read.setContent(content);
         r.saveAndFlush(read) ;
