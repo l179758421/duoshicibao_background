@@ -11,6 +11,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -30,7 +31,7 @@ public class ReadApi {
 
 
     @ApiOperation(value = "阅读精选",notes = "获取阅读精选")
-    @RequestMapping(value = "getData")
+    @RequestMapping(value = "getData",method = {RequestMethod.GET})
     public ApiResult getData (){
         List<Read> all = beanService.findAll();
         return new ApiResult(ResultMsg.SUCCESS,all);
